@@ -1,0 +1,27 @@
+name: AlmostKoisChatGames
+version: '${project.version}'
+main: almostkoi.AlmostKoisChatGames
+api-version: '1.20'
+description: Engage your server chat with fun competitive reaction games.
+author: almostkoi
+folia-supported: true
+softdepend:
+  - PlaceholderAPI
+  - Vault
+
+commands:
+  acg:
+    description: Main command for AlmostKoi's Chat Games.
+    aliases: [chatgames, chatgame, almostkoischatgames, kcg]
+    usage: /acg <forcestart/toggle/reload/info>
+
+permissions:
+  chatgames.admin:
+    description: Grants administrator access for AlmostKoi's Chat Games.
+    default: op
+  chatgames.see:
+    description: Allows players to participate and see chat games.
+    default: true
+  chatgames.toggle:
+    description: Allows players to toggle their chat game visibility.
+    default: true

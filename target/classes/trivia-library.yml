@@ -1,0 +1,73 @@
+# ==========================================
+#         Kix's Chat Games Trivia Library
+# ==========================================
+# List of questions and their possible acceptable answers.
+# Answers are evaluated case-insensitively by default (or depending on case-sensitive setting).
+
+trivia:
+  - question: "What material is stronger than diamond in Minecraft?"
+    answers:
+      - "Netherite"
+      - "netherite"
+  - question: "Which mob is known as the 'terror of the skies' in the End?"
+    answers:
+      - "Ender Dragon"
+      - "enderdragon"
+      - "ender dragon"
+  - question: "What item allows you to glide through the air?"
+    answers:
+      - "Elytra"
+      - "elytra"
+  - question: "How many obsidian blocks are needed to make a minimal Nether Portal?"
+    answers:
+      - "10"
+      - "ten"
+  - question: "What item is used to tame a wolf?"
+    answers:
+      - "Bone"
+      - "bones"
+      - "bone"
+  - question: "What block is used to cure a zombie villager when combined with a splash potion of weakness?"
+    answers:
+      - "Golden Apple"
+      - "golden apple"
+      - "gapple"
+  - question: "Which boss mob has three heads and shoots explosive skull projectiles?"
+    answers:
+      - "Wither"
+      - "the wither"
+      - "wither"
+  - question: "What do creepers turn into when struck by lightning?"
+    answers:
+      - "Charged Creeper"
+      - "chargedcreeper"
+      - "charged creeper"
+  - question: "What item do you use to brew potions?"
+    answers:
+      - "Brewing Stand"
+      - "brewingstand"
+      - "brewing stand"
+  - question: "What block is used to set a compass's lodestone position?"
+    answers:
+      - "Lodestone"
+      - "lodestone"
+  - question: "What food item restores the most hunger points in the game?"
+    answers:
+      - "Rabbit Stew"
+      - "rabbit stew"
+  - question: "Which tool is used to mine Obsidian?"
+    answers:
+      - "Diamond Pickaxe"
+      - "Netherite Pickaxe"
+      - "pickaxe"
+      - "diamond pickaxe"
+      - "netherite pickaxe"
+  - question: "What is the primary ingredient of a Beacon?"
+    answers:
+      - "Nether Star"
+      - "nether star"
+      - "netherstar"
+  - question: "What is the maximum number of enchantment levels a player can spend on an enchantment table at once?"
+    answers:
+      - "30"
+      - "thirty"

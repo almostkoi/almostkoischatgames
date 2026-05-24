@@ -1,0 +1,106 @@
+# ==========================================
+#         AlmostKoi's Chat Games Messages
+# ==========================================
+# Use standard color codes (e.g. &a, &7).
+# Support for Hex colors depends on Minecraft version (e.g. &#ff5555).
+# Use {NL} for a new line.
+#
+# Placeholders:
+# {PREFIX} - The prefix defined below.
+# {QUESTION} - The game question or string to type/solve/unscramble.
+# {ANSWER} - The correct answer.
+# {PLAYER} - The winning player's name.
+# {TIME} - The time taken to solve, or remaining time.
+
+prefix: "&6&lChatGames &7» "
+
+# Text templates for starting each game mode
+games:
+  unscramble:
+    start:
+      - "&8&m--------------------------------------------------"
+      - "                  &6&lUNSCRAMBLE GAME"
+      - "  &7Unscramble the word: &e&l{QUESTION}"
+      - "  &7Type the correct word in chat to win!"
+      - "&8&m--------------------------------------------------"
+  solve:
+    start:
+      - "&8&m--------------------------------------------------"
+      - "                  &6&lMATH SOLVER"
+      - "  &7Solve this equation: &e&l{QUESTION}"
+      - "  &7Type the correct number in chat to win!"
+      - "&8&m--------------------------------------------------"
+  type:
+    start:
+      - "&8&m--------------------------------------------------"
+      - "                  &6&lSPEED TYPER"
+      - "  &7Type this word: &e&l{QUESTION}"
+      - "  &7Type the word exactly in chat to win!"
+      - "&8&m--------------------------------------------------"
+  type_random:
+    start:
+      - "&8&m--------------------------------------------------"
+      - "                  &6&lCAPTCHA SPEED TEST"
+      - "  &7Type these characters: &e&l{QUESTION}"
+      - "  &7Watch out for case sensitivity!"
+      - "&8&m--------------------------------------------------"
+  trivia:
+    start:
+      - "&8&m--------------------------------------------------"
+      - "                  &6&lTRIVIA TIME"
+      - "  &e{QUESTION}"
+      - "  &7Type the correct answer in chat to win!"
+      - "&8&m--------------------------------------------------"
+  fill_in:
+    start:
+      - "&8&m--------------------------------------------------"
+      - "                  &6&lFILL IN THE BLANKS"
+      - "  &7Fill in the missing letters: &e&l{QUESTION}"
+      - "  &7Type the complete word in chat to win!"
+      - "&8&m--------------------------------------------------"
+  word_unshuffle:
+    start:
+      - "&8&m--------------------------------------------------"
+      - "                  &6&lWORD UNSHUFFLE"
+      - "  &7Put these words back in order: &e&l{QUESTION}"
+      - "  &7Type the correct phrase in chat to win!"
+      - "&8&m--------------------------------------------------"
+  reverse_word_unshuffle:
+    start:
+      - "&8&m--------------------------------------------------"
+      - "                  &6&lREVERSE WORD UNSHUFFLE"
+      - "  &7Reverse the spelling and order: &e&l{QUESTION}"
+      - "  &7Type the correct phrase in chat to win!"
+      - "&8&m--------------------------------------------------"
+  unreverse:
+    start:
+      - "&8&m--------------------------------------------------"
+      - "                  &6&lUNREVERSE WORD"
+      - "  &7Unreverse the word: &e&l{QUESTION}"
+      - "  &7Type the correct word forward in chat to win!"
+      - "&8&m--------------------------------------------------"
+
+# General system messages
+messages:
+  toggled-on: "{PREFIX}&aChat games visibility turned ON."
+  toggled-off: "{PREFIX}&cChat games visibility turned OFF."
+  no-permission: "{PREFIX}&cYou do not have permission to execute this command."
+  only-players: "{PREFIX}&cOnly players can execute this command."
+  force-start-usage: "{PREFIX}&cUsage: /acg forcestart <gametype>"
+  reload-success: "{PREFIX}&aConfiguration reloaded successfully!"
+  info:
+    - "&8&m--------------------------------------------------"
+    - "               &6&lAlmostKoi's Chat Games"
+    - "  &7Version: &e1.0.0"
+    - "  &7Folia Support: &aEnabled"
+    - "  &7Word Library Size: &e{WORDS} words"
+    - "  &7Trivia Library Size: &e{TRIVIA} questions"
+    - "  &7Status: &eActive"
+    - "&8&m--------------------------------------------------"
+  invalid-game-type: "{PREFIX}&cInvalid game type. Choose from: &7{TYPES}"
+  game-expired:
+    - "&8&m--------------------------------------------------"
+    - "                  &c&lGAME EXPIRED!"
+    - "  &7Nobody solved the game in time."
+    - "  &7The correct answer was: &e{ANSWER}"
+    - "&8&m--------------------------------------------------"

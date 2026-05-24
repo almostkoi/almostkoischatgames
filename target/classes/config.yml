@@ -1,0 +1,59 @@
+# ==========================================
+#       AlmostKoi's Chat Games Configuration
+# ==========================================
+
+# How often should a chat game start automatically (in seconds)?
+# Set to -1 to disable automatic games entirely (manual start only).
+# Default: 300 (5 minutes)
+game-interval: 300
+
+# How long does a chat game last before it expires (in seconds)?
+# Must be less than game-interval.
+# Default: 30 (30 seconds)
+game-lifetime: 30
+
+# Should players be required to have the 'chatgames.see' permission to see and participate in games?
+# If false, anyone can see and participate, unless they have toggled it off.
+# Default: false
+use-game-permissions: false
+
+# If true, chat games will be case sensitive. If false, case does not matter.
+# E.g., if true, "Minecraft" requires typing "Minecraft" exactly. If false, "minecraft" is accepted.
+# Note: Type Random is always case-sensitive as it mimics a captcha.
+# Default: false
+case-sensitive: false
+
+# If true, the plugin will process responses on the main server thread.
+# Keep this false (asynchronous) to avoid lag, unless you have response registration issues.
+# Default: false
+sync-response-processor: false
+
+# Sound effects played during various game events.
+# Use official Bukkit Sound names for your server version.
+# Set to "" to disable a sound.
+sounds:
+  start: "ENTITY_PLAYER_LEVELUP"
+  win: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  expire: "ENTITY_VILLAGER_NO"
+
+# List of game types that are enabled for automatic start.
+# Available types:
+# - UNSCRAMBLE
+# - SOLVE
+# - TYPE
+# - TYPE_RANDOM
+# - TRIVIA
+# - FILL_IN
+# - WORD_UNSHUFFLE
+# - REVERSE_WORD_UNSHUFFLE
+# - UNREVERSE
+enabled-games:
+  - UNSCRAMBLE
+  - SOLVE
+  - TYPE
+  - TYPE_RANDOM
+  - TRIVIA
+  - FILL_IN
+  - WORD_UNSHUFFLE
+  - REVERSE_WORD_UNSHUFFLE
+  - UNREVERSE

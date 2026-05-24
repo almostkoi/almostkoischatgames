@@ -1,0 +1,25 @@
+# ==========================================
+#       AlmostKoi's Chat Games Rewards
+# ==========================================
+# Define what happens when a player wins a chat game.
+# You can define multiple rewards per win - all entries in the list run.
+#
+# Supported Prefixes:
+# {player-msg}: <message>       - Sends a private message to the winner.
+# {console-cmd}: <command>      - Executes a console command (no leading /).
+# {player-cmd}: <command>       - Executes a command as the winning player (no leading /).
+# {broadcast-all}: <message>    - Broadcasts a message to the entire server.
+# {broadcast-safe}: <message>   - Broadcasts only to players who have games enabled/visible.
+# {vault-money}: <amount>       - Deposits the specified amount into the winner's economy
+#                                 balance (requires Vault + an economy plugin installed).
+#
+# Placeholders available in ALL reward strings:
+# %player%  - Name of the winner.
+# %game%    - Display name of the game type (e.g. Unscramble).
+# %answer%  - The correct answer.
+# %time%    - Time taken to solve, in seconds (e.g. 3.42).
+
+rewards:
+  - "{player-msg}: &e&lCHAT GAME &7» &aYou won! +$500 added to your balance."
+  - "{vault-money}: 500"
+  - "{broadcast-safe}: &e&lCHAT GAME &7» &6%player% &7solved &6%game% &7in &e%time%s &7and earned &a$500&7! &8(&e%answer%&8)"
