@@ -18,8 +18,10 @@
 # %game%    - Display name of the game type (e.g. Unscramble).
 # %answer%  - The correct answer.
 # %time%    - Time taken to solve, in seconds (e.g. 3.42).
+# %wins%    - The player's total win count (e.g. 78).
+# %wins_ordinal% - The player's total win count with ordinal suffix (e.g. 78th).
 
 rewards:
   - "{player-msg}: &e&lCHAT GAME &7» &aYou won! +$500 added to your balance."
   - "{vault-money}: 500"
-  - "{broadcast-safe}: &e&lCHAT GAME &7» &6%player% &7solved &6%game% &7in &e%time%s &7and earned &a$500&7! &8(&e%answer%&8)"
+  - "{broadcast-safe}: &e&lCHAT GAME &7» &6%player% &7solved &6%game% &7in &e%time%s &7and won for the &d%wins_ordinal% &7time! &8(&e%answer%&8)"

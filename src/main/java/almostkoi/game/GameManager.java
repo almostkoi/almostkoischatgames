@@ -226,18 +226,38 @@ public class GameManager {
         return false;
     }
 
+    private String getOrdinal(int n) {
+        if (n <= 0) return String.valueOf(n);
+        int mod100 = n % 100;
+        int mod10 = n % 10;
+        if (mod100 >= 11 && mod100 <= 13) {
+            return n + "th";
+        }
+        switch (mod10) {
+            case 1:  return n + "st";
+            case 2:  return n + "nd";
+            case 3:  return n + "rd";
+            default: return n + "th";
+        }
+    }
+
     private void giveRewards(Player player, ChatGame game, long timeMs) {
         double seconds = timeMs / 1000.0;
         String secondsStr = String.format("%.2f", seconds);
         String gameName = game.getType().getDisplayName();
         String answer = game.getAnswers().get(0);
+        int winsCount = plugin.getStorage().getWins(player.getUniqueId());
+        String winsStr = String.valueOf(winsCount);
+        String winsOrdinalStr = getOrdinal(winsCount);
 
         for (String reward : rewards) {
             String processed = reward
                     .replace("%player%", player.getName())
                     .replace("%game%", gameName)
                     .replace("%answer%", answer)
-                    .replace("%time%", secondsStr);
+                    .replace("%time%", secondsStr)
+                    .replace("%wins%", winsStr)
+                    .replace("%wins_ordinal%", winsOrdinalStr);
 
             if (processed.startsWith("{player-msg}:")) {
                 String msg = processed.substring("{player-msg}:".length()).trim();
