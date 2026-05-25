@@ -92,6 +92,7 @@ public class AlmostKoisChatGames extends JavaPlugin {
         return prefix;
     }
 
+    @SuppressWarnings("deprecation")
     public static String colorize(String message) {
         if (message == null) return null;
         Pattern pattern = Pattern.compile("&#([A-Fa-f0-9]{6})");

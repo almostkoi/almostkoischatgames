@@ -270,7 +270,11 @@ public class GameManager {
                 TaskWrapper.executePlayerCommand(player, cmd);
             } else if (processed.startsWith("{broadcast-all}:")) {
                 String msg = processed.substring("{broadcast-all}:".length()).trim();
-                Bukkit.broadcastMessage(AlmostKoisChatGames.colorize(msg));
+                String formatted = AlmostKoisChatGames.colorize(msg);
+                for (Player p : Bukkit.getOnlinePlayers()) {
+                    p.sendMessage(formatted);
+                }
+                Bukkit.getConsoleSender().sendMessage(formatted);
             } else if (processed.startsWith("{broadcast-safe}:")) {
                 String msg = processed.substring("{broadcast-safe}:".length()).trim();
                 String formatted = AlmostKoisChatGames.colorize(msg);
